@@ -6,14 +6,14 @@
 The log component is implemented in Python with libraries including `threading` and `queue` to enable asynchronous logging.
 ## fold structure
 * y-intercept-coding-test
-  * logs/: folder to store the output log files
-  * resources/: resources for README
-  * LogComponent.py: the implementation of the log component
+  * **logs/**: folder to store the output log files
+  * **resources/**: resources for README
+  * **LogComponent.py**: the implementation of the log component
     * **AsyncLogWriter** Class: asynchronous log writer
     * **ILog** Interface: the interface to use the logger
-  * Application.py
+  * **Application.py**
     * Use sample of ILog
-  * test_log_component.py: Unit testing
+  * **test_log_component.py**: Unit testing
     * test_ilog_write: test the basic writing function
     * test_midnight_file_creation: test midnight new file creation
     * test_stop_behavior: test the stop behavior
@@ -24,9 +24,7 @@ The log component is implemented in Python with libraries including `threading` 
 * **Thread-safe Queue**:
   * A Queue is used to store log messages. This ensures that communication between the main thread (application) and the log writer thread is thread-safe.
 * **Logging Loop**:
-  * The run method contains the main loop that continuously checks for new log messages and writes them to the file.
-* Error Handling:
-  * Any exceptions raised during file writing are caught and printed to the console, as per the requirements.
+  * The run method contains the main loop that continuously checks for new log messages and writes them to the file.\
 
 ### ILog Interface
 * Initialization:
